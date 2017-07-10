@@ -1,0 +1,26 @@
+Payload of server notification webhook
+{
+    "server_id": "server_id",
+    "notification_id": "notification_id",
+    "alert_id": "alert_id",
+    "server_name": "web-server",
+    "metric": "pct-cpu",
+    "status": “open”,
+    "value": 99.928,
+    "subject": "CPU overall higher 99% - currently: 100 %",
+    "threshold": 99,
+    "start_time": 1491992292,
+    "time": 1491992322
+}
+
+Payload of web monitor notification webhook
+{
+    "domain_id": "554be6e94303ed9c2d8b4568",
+    "notification_id": "58eb5d0d22607e0791308ac5",
+    "name": "uptimetest.nixstats.com",
+    "status": "close",
+    "subject": "Monitor uptimetest.nixstats.com is back online",
+    "start_time": 1491819789,
+    "end_time": 1492187938,
+    "time": 1492187938
+}
