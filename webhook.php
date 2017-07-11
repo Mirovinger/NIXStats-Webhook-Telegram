@@ -1,6 +1,11 @@
 <?php
 $telegrambot = "123456789:SCR8NwQtqFoD3dPSmu99z8um8vN8jfQNYps";
+$turbosmslogin = "mylogin";
+$turbosmspassword = "myverystrongpassword";
+$turbosmssender = "MySender";
+$turbosmsrecipient = "+380XXXXXXXXX,+380XXXXXXXXX";
 $telegramchatid = "12345678";
+
 $timezone = 2; // 2 for UTC+2
 
 include("functions/telegram.php");
