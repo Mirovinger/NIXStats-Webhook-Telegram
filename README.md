@@ -2,7 +2,7 @@
 
 ## Description
 
-A Webhook to get your servers/monitors notifications on Telegram with NIXStats
+A Webhook to get your servers/monitors notifications on Telegram or/and SMS with NIXStats
 
 ## Screenshots
 
@@ -16,6 +16,7 @@ A Webhook to get your servers/monitors notifications on Telegram with NIXStats
 - NIXStats agent installed on your server
 - A Telegram Bot (see [here](https://core.telegram.org/bots#creating-a-new-bot) how to create a new Telegram bot)
 - Your Telegram user ID (you can get it [here](https://telegram.me/myidbot))
+- A Turbosms [account](https://turbosms.ua/gateway.html)
 
 ### On your server
 
@@ -26,13 +27,15 @@ cd /var/www/html/
 
 mkdir NIXStats && cd NIXStats/
 
-wget https://raw.githubusercontent.com/Punk--Rock/NIXStats-Webhook-Telegram/master/webhook.php
+wget https://raw.githubusercontent.com/ealebed/NIXStats-Webhook-Telegram/master/webhook.php
 
 mkdir functions && cd functions/
 
-wget https://raw.githubusercontent.com/Punk--Rock/NIXStats-Webhook-Telegram/master/functions/telegram.php
+wget https://raw.githubusercontent.com/ealebed/NIXStats-Webhook-Telegram/master/functions/telegram.php
+wget https://raw.githubusercontent.com/ealebed/NIXStats-Webhook-Telegram/master/functions/sms.php
 ```
 
+- Edit ```$telegrambot``` and ```$telegramchatid``` variables in webhook.php with your Telegram bot token and your Telegram user ID
 - Edit ```$telegrambot``` and ```$telegramchatid``` variables in webhook.php with your Telegram bot token and your Telegram user ID
 
 ### On NIXStats
@@ -50,7 +53,3 @@ wget https://raw.githubusercontent.com/Punk--Rock/NIXStats-Webhook-Telegram/mast
 [![Twitter](https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-24.png)](https://twitter.com/Bilyb0y) [![GitHub](https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-24.png)](https://github.com/bilyboy785/) Martin Bouillaud and his [NIXStats-Webhook-Telegram](https://github.com/bilyboy785/nixstats-webhook-telegram) version
 
 [![Twitter](https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-24.png)](https://twitter.com/nixstats) [![GitHub](https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-24.png)](https://github.com/NIXStats) Vincent from [NIXStats](https://nixstats.com) for json samples
-
-## Contact me
-
-[![Twitter](https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-24.png)](https://twitter.com/Punk__R0ck) [@Punk__R0ck](https://twitter.com/Punk__R0ck)
