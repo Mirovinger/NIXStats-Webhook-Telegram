@@ -1,8 +1,8 @@
-# NIXStats-Webhook-Telegram
+# Nixstats-Webhook-Telegram/SMS
 
 ## Description
 
-A Webhook to get your servers/monitors notifications on Telegram or/and SMS with NIXStats
+A Webhook to get your servers/monitors notifications on Telegram or/and SMS with Nixstats
 
 ## Screenshots
 
@@ -12,11 +12,11 @@ A Webhook to get your servers/monitors notifications on Telegram or/and SMS with
 
 ### Pre-requisites
 
-- A NIXStats account
+- NIXStats account
 - NIXStats agent installed on your server
-- A Telegram Bot (see [here](https://core.telegram.org/bots#creating-a-new-bot) how to create a new Telegram bot)
+- Telegram Bot (see [here](https://core.telegram.org/bots#creating-a-new-bot) how to create a new Telegram bot)
 - Your Telegram user ID (you can get it [here](https://telegram.me/myidbot))
-- A Turbosms [account](https://turbosms.ua/gateway.html)
+- Turbosms [account](https://turbosms.ua/gateway.html)
 
 ### On your server
 
@@ -35,8 +35,7 @@ wget https://raw.githubusercontent.com/ealebed/NIXStats-Webhook-Telegram/master/
 wget https://raw.githubusercontent.com/ealebed/NIXStats-Webhook-Telegram/master/functions/sms.php
 ```
 
-- Edit ```$telegrambot``` and ```$telegramchatid``` variables in webhook.php with your Telegram bot token and your Telegram user ID
-- Edit ```$telegrambot``` and ```$telegramchatid``` variables in webhook.php with your Telegram bot token and your Telegram user ID
+- Edit variables ```$telegrambot```, ```$telegramchatid```, ```$turbosmslogin```, ```$turbosmspassword```, ```$turbosmssender``` and ```$turbosmsrecipient``` in webhook.php
 
 ### On NIXStats
 
