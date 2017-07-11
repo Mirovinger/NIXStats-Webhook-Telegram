@@ -4,6 +4,7 @@ $telegramchatid = "12345678";
 $timezone = 2; // 2 for UTC+2
 
 include("functions/telegram.php");
+include("functions/sms.php");
 
 if(isset($_POST['payload']))
 {
@@ -26,10 +27,12 @@ if(isset($_POST['payload']))
 		if($status == "open")
 		{
 			telegram($subject."\n".$start_time."\nView server statistics on https://nixstats.com/server/".$server_id);
+			sms($subject."\n".$start_time);
 		}
 		else
 		{
 			telegram($subject."\n".$time."\nView server statistics on https://nixstats.com/server/".$server_id);
+			sms($subject."\n".$time);
 		}
 	}
 	else
@@ -45,10 +48,12 @@ if(isset($_POST['payload']))
 		if($status == "OPEN")
 		{
 			telegram($status." - ".$name." ".$subject."\n".$start_time."\nView domain statistics on https://nixstats.com/domain/".$domain_id);
+			sms($status." - ".$name." ".$subject."\n".$start_time);
 		}
 		else
 		{
 			telegram($status." - ".$name." ".$subject."\n".$end_time."\nView domain statistics on https://nixstats.com/domain/".$domain_id);
+			sms($status." - ".$name." ".$subject."\n".$end_time);
 		}
 	}
 }
